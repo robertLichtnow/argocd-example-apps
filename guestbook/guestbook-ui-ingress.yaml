@@ -9,6 +9,7 @@ metadata:
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}, {"HTTP":80}]'
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:645055147548:certificate/cb2a5276-0aee-4f25-bc4d-a11ab6ffb23b
     alb.ingress.kubernetes.io/ssl-redirect: '443'
+    alb.ingress.kubernetes.io/target-type: ip
 spec:
   ingressClassName: alb
   rules:
@@ -22,4 +23,3 @@ spec:
                 name: guestbook-ui
                 port:
                   number: 80
-                  
