@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cdk8s-plugin
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: cdk8s-plugin
+  template:
+    metadata:
+      labels:
+        app: cdk8s-plugin
+    spec:
+      containers:
+      - image: 371401629555.dkr.ecr.us-east-1.amazonaws.com/workos-infra:argocd-cdk8s-plugin-latest
+        name: cdk8s-plugin
+
