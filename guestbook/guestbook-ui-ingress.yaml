@@ -8,13 +8,13 @@ metadata:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/load-balancer-name: 'main-eks-cluster-guestbook-ui'
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}, {"HTTP":80}]'
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:645055147548:certificate/cb2a5276-0aee-4f25-bc4d-a11ab6ffb23b
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:645055147548:certificate/6030e284-c11c-4a87-ba39-3fe9bf939cf6
     alb.ingress.kubernetes.io/ssl-redirect: '443'
     alb.ingress.kubernetes.io/target-type: ip
 spec:
   ingressClassName: alb
   rules:
-    - host: guestbook-ui.workos.land
+    - host: guestbook-ui.workosapp.com
       http:
         paths:
           - path: /
