@@ -14,8 +14,13 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-      - image: ubuntu:22.04
-        command: [bash, -c, "exit 1"]
+      - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
         name: guestbook-ui
         ports:
         - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080 # borked
+          initialDelaySeconds: 5
+          periodSeconds: 5
