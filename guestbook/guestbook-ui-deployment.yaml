@@ -36,7 +36,7 @@ spec:
         startupProbe:
           httpGet:
             path: /health
-            port: 8080 # borked
+            port: 80 # borked
           initialDelaySeconds: 1
           periodSeconds: 1
           failureThreshold: 1
