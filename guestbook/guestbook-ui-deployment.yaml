@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: guestbook-ui
-  annotations:
-    ignore: me
 spec:
   replicas: 1
   revisionHistoryLimit: 3
@@ -16,7 +14,7 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+      - image: gcr.i/heptio-images/ks-guestbook-demo:0.2
         name: guestbook-ui
         ports:
         - containerPort: 80
