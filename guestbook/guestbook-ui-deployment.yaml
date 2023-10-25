@@ -22,6 +22,20 @@ spec:
           httpGet:
             path: /health
             port: 8080 # borked
-          initialDelaySeconds: 5
-          periodSeconds: 5
-          failureThreshold: 3
+          initialDelaySeconds: 1
+          periodSeconds: 1
+          failureThreshold: 1
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080 # borked
+          initialDelaySeconds: 1
+          periodSeconds: 1
+          failureThreshold: 1
+        startupProbe:
+          httpGet:
+            path: /health
+            port: 8080 # borked
+          initialDelaySeconds: 1
+          periodSeconds: 1
+          failureThreshold: 1
