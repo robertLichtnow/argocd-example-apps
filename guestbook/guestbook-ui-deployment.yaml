@@ -33,10 +33,3 @@ spec:
           initialDelaySeconds: 1
           periodSeconds: 1
           failureThreshold: 1
-        startupProbe:
-          httpGet:
-            path: /health
-            port: 80 # borked
-          initialDelaySeconds: 1
-          periodSeconds: 1
-          failureThreshold: 1
