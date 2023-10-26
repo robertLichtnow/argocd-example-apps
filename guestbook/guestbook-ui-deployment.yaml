@@ -5,8 +5,6 @@ metadata:
 spec:
   replicas: 1
   revisionHistoryLimit: 3
-  minReadySeconds: 1
-  progressDeadlineSeconds: 2
   selector:
     matchLabels:
       app: guestbook-ui
@@ -20,17 +18,3 @@ spec:
         name: guestbook-ui
         ports:
         - containerPort: 80
-        readinessProbe:
-          httpGet:
-            path: /health
-            port: 8080 # borked
-          initialDelaySeconds: 1
-          periodSeconds: 1
-          failureThreshold: 1
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 8080 # borked
-          initialDelaySeconds: 1
-          periodSeconds: 1
-          failureThreshold: 1
